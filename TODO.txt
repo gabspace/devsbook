@@ -1,8 +1,7 @@
 
 
 # ESTRUTURA DO BANCO DE DADOS
-
-## Users
+### Users
 - id
 - email
 - password
@@ -12,9 +11,24 @@
 - work
 - avatar
 - cover
-- UserRelations
-- Post
-- PostComments
-- PostLikes
-
-
+- token
+### UserRelations
+- id
+- user_from
+- user_to
+### Post
+- id
+- type (text, photo)
+- created_at
+- body
+### PostComments
+- id
+- id_post
+- id_user
+- created_at
+- body
+### PostLikes
+- id
+- id_post
+- id_user
+- created_at
