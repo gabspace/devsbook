@@ -1,2 +1,5 @@
 /.vscode
 /.arquivos_base
+composer.phar
+/vendor/
+.DS_Store
