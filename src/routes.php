@@ -6,5 +6,6 @@ $router = new Router();
 $router->get('/', 'HomeController@index');
 // LoginController
 $router->get('/login', 'LoginController@signin');
+$router->post('/login', 'LoginController@signinaction');
 $router->get('/cadastro', 'LoginController@signup');
 
