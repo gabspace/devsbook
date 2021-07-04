@@ -1,0 +1,20 @@
+
+
+# ESTRUTURA DO BANCO DE DADOS
+
+## Users
+- id
+- email
+- password
+- name
+- birthdate
+- city
+- work
+- avatar
+- cover
+- UserRelations
+- Post
+- PostComments
+- PostLikes
+
+
