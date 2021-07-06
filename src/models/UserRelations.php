@@ -2,6 +2,6 @@
 namespace src\models;
 use \core\Model;
 
-class UserRelation extends Model {
+class UserRelations extends Model {
   
 }

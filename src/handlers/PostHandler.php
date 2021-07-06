@@ -3,7 +3,7 @@ namespace src\handlers;
 
 use \src\models\Post;
 use \src\models\User;
-use \src\models\UserRelation;
+use \src\models\UserRelations;
 
 class PostHandler {
 
@@ -26,7 +26,7 @@ class PostHandler {
     $perPage = 2;
 
     // 1 lista de ususarios que eu sigo
-    $userList = UserRelation::select()->where('user_from', $idUser)->get();
+    $userList = UserRelations::select()->where('user_from', $idUser)->get();
     $users = [];
     foreach($userList as $userItem) {
       $users[] = $userItem['user_to'];
