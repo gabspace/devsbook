@@ -42,7 +42,7 @@ class ProfileController extends Controller {
         $page, 
         $this->loggedUser->id
       );
-
+      
       $this->render('profile', [
         'user' => $user,
         'loggedUser' => $this->loggedUser,
