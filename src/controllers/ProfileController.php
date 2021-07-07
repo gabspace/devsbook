@@ -3,6 +3,7 @@ namespace src\controllers;
 
 use \core\Controller;
 use \src\handlers\UserHandler;
+use \src\handlers\PostHandler;
 
 class ProfileController extends Controller {
 
@@ -18,6 +19,7 @@ class ProfileController extends Controller {
     }
 
     public function index($atts = []) {
+      $page = intval(filter_input(INPUT_GET, 'page'));
 
       $id = $this->loggedUser->id;
 
@@ -35,9 +37,16 @@ class ProfileController extends Controller {
       $dateTo = new \DateTime('today');
       $user->ageYears = $dateFrom->diff($dateTo)->y;
 
+      $feed = PostHandler::getUserFeed(
+        $id, 
+        $page, 
+        $this->loggedUser->id
+      );
+
       $this->render('profile', [
         'user' => $user,
-        'loggedUser' => $this->loggedUser
+        'loggedUser' => $this->loggedUser,
+        'feed' => $feed
       ]);
     }
 
