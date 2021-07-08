@@ -12,7 +12,7 @@
 - avatar
 - cover
 - token
-### UserRelations
+### UserRelation
 - id
 - user_from
 - user_to

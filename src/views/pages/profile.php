@@ -19,11 +19,7 @@
 
                     <?php if($user->id != $loggedUser->id): ?>
                       <div class="profile-info-item m-width-20">
-                        <?php if($isFollowing): ?>
-                            <a class="button" href="<?=$base;?>">Deixar de Seguir </a>
-                          <?php else: ?>
-                            <a class="button" href="<?=$base;?>">Seguir </a>
-                          <?php endif; ?>
+                        <a class="button" href="<?=$base;?>/perfil/<?=$user->id;?>/follow"><?=(!$isFollowing)?'Seguir':'Deixar de seguir';?></a>
                       </div>
                     <?php endif; ?>
 
