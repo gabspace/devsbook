@@ -81,7 +81,7 @@ class UserHandler {
           $newUser = new User();
           $newUser->id = $userData['id'];
           $newUser->name = $userData['name'];
-          $newUser->avatar = $userData['id'];
+          $newUser->avatar = $userData['avatar'];
 
           $user->followers[] = $newUser;
         }
@@ -94,7 +94,7 @@ class UserHandler {
           $newUser = new User();
           $newUser->id = $userData['id'];
           $newUser->name = $userData['name'];
-          $newUser->avatar = $userData['id'];
+          $newUser->avatar = $userData['avatar'];
 
           $user->following[] = $newUser;
         }
@@ -151,5 +151,4 @@ class UserHandler {
     ->execute();
 
   }
-
 }
