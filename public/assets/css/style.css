@@ -288,6 +288,10 @@ header .head-side {
     padding-left:20px;
 }
 
+.profile-info-item a {
+  text-decoration: none;
+}
+
 .profile-info-item {
     text-align: center;
 }
